@@ -27,6 +27,8 @@ class Firewall (object):
     # The code in here will be executed for every packet.
     # The following lines specify the 3 types of packets
     # that are required to be looked for
+    # using the find method for strings to return index of first occurence
+    # tried setting up in a binary way to check if respective string exists in packet or not
     tcp = packet.find('tcp')
     ipv4 = packet.find('ipv4')
     arp = packet.find('arp')
@@ -34,7 +36,8 @@ class Firewall (object):
     
     #The following are conditonals that represrnt the 
     # rules that this firewall needs to abide by
-    # these rules are given in the table in the lab assignment
+    # these rules are given in the table 
+    # Logic: if no respective string or (strings) occur then return accept  otherwise drop
   
     if tcp is not NONE and ipv4 is not NONE:
       return 'accept'
