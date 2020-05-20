@@ -1,6 +1,6 @@
 # Final Skeleton
 #
-# Hints/Reminders from Lab 3:
+#
 #
 # To check the source and destination of an IP packet, you can use
 # the header information... For example:
